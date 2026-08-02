@@ -1,0 +1,56 @@
+services:
+  httpa:
+    build:
+      context: ./http-a
+    image: multihop/httpa:latest
+    ports:
+      - "8001:8000"
+    depends_on:
+      - httpb
+      - httpc
+    networks:
+      - app_network
+
+  httpb:
+    build:
+      context: ./http-b
+    image: multihop/httpb:latest
+    depends_on:
+      - rpca
+      - rpcb
+    networks:
+      - app_network
+
+  httpc:
+    build:
+      context: ./http-c
+    image: multihop/httpc:latest
+    depends_on:
+      - rpcc
+    networks:
+      - app_network
+
+  rpca:
+    build:
+      context: ./rpc-a
+    image: multihop/rpca:latest
+    networks:
+      - app_network
+
+  rpcb:
+    build:
+      context: ./rpc-b
+    image: multihop/rpcb:latest
+    networks:
+      - app_network
+
+  rpcc:
+    build:
+      context: ./rpc-c
+    image: multihop/rpcc:latest
+    networks:
+      - app_network
+
+networks:
+  app_network:
+    driver: bridge

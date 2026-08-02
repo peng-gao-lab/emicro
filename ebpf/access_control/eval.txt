@@ -1,0 +1,3 @@
+match(PUBLIC, httpa) allow;
+match(httpa, httpb) allow;
+match(httpb, httpa) allow;

@@ -1,0 +1,4 @@
+match(PUBLIC, httpa, httpc, rpcc) allow;
+match(PUBLIC, httpa, httpb, rpca) allow;
+match(PUBLIC, httpa, httpb, rpcb) allow;
+match(httpa, httpb) allow;
