@@ -10,7 +10,7 @@
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![eBPF](https://img.shields.io/badge/enforcement-eBPF-f9a825.svg)](https://ebpf.io/)
 
-**[Paper](paper/emicro.pdf)** · **[Quick Start](#quick-start-toy-example)** · **[Architecture](#how-it-works)** · **[Citation](#citation)**
+**[Paper](paper/emicro-ccs26.pdf)** · **[Quick Start](#quick-start-toy-example)** · **[Architecture](#how-it-works)** · **[Citation](#citation)**
 
 </div>
 
