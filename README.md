@@ -114,7 +114,7 @@ processes, threads, and coroutines while avoiding user/kernel context switches:
 Enforcement stays **local and decentralized** at each service, with policies
 replicated across nodes via a consensus protocol — removing the
 single-point-of-failure and bottleneck of prior centralized multi-hop
-access-control systems. See the [paper](paper/emicro.pdf) for the replication
+access-control systems. See the [paper](paper/emicro-ccs26.pdf) for the replication
 design and evaluation.
 
 ---
@@ -127,7 +127,7 @@ design and evaluation.
 | [`ebpf/`](ebpf/) | eBPF tracing & enforcement programs (`bpf_probe.c`, `bpf_tc.c`, `multihop.h`), `create_dfa.py` (compiles a policy into the enforcement DFA via the compiler), and the Python attach/detach control plane. |
 | [`ebpf/access_control/`](ebpf/access_control/) | Multi-hop policies (`.txt`) in the policy language, for the toy example plus the social-network and media workloads. The bundled files are `match(...) allow;` allow-lists. |
 | [`apps/toy/`](apps/toy/) | A self-contained **toy** microservice cluster (Docker Compose) used by the quick start. |
-| [`paper/`](paper/emicro.pdf) | The CCS '26 paper. |
+| [`paper/`](paper/emicro-ccs26.pdf) | The CCS '26 paper. |
 | [`Makefile`](Makefile) | Convenience targets: `attach`, `detach`. |
 
 ---
